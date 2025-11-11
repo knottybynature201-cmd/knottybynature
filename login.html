@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Login - Knotty By Nature Crafts</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Login</h1>
+    </header>
+
+    <main style="padding: 28px; text-align: center">
+      <button id="googleLogin" class="btn">Sign in with Google</button>
+      <p style="margin-top: 12px; font-size: 0.95rem">
+        You must be signed in to add items to cart and checkout.
+      </p>
+    </main>
+
+    <!-- Firebase JS SDKs (Compat version for browser usage) -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-functions-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-analytics-compat.js"></script>
+
+    <!-- Stripe JS (optional if using checkout) -->
+    <script src="https://js.stripe.com/v3/"></script>
+
+    <!-- Your main app logic -->
+    <script src="app.js"></script>
+  </body>
+</html>

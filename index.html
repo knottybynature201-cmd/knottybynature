@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Knotty By Nature Crafts</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Yarn hangers (SVG repeated) -->
+    <div class="yarn-row">
+      <!-- inline SVG "yarn bobble and strand" repeated for visual -->
+      <svg
+        class="yarn"
+        viewBox="0 0 100 200"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        <g transform="translate(50,10)">
+          <path
+            d="M0 0 C5 30, 15 60, 0 80"
+            stroke="#ffb6c1"
+            stroke-width="3"
+            fill="none"
+            stroke-linecap="round"
+          />
+          <circle
+            cx="0"
+            cy="95"
+            r="22"
+            fill="#ff7aa2"
+            stroke="#fff"
+            stroke-width="2"
+          />
+          <path
+            d="M-12,90 C-10,60 -4,40 0,30"
+            stroke="#ffcce0"
+            stroke-width="2"
+            fill="none"
+          />
+        </g>
+      </svg>
+      <svg
+        class="yarn"
+        viewBox="0 0 100 200"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        <g transform="translate(50,5)">
+          <path
+            d="M0 0 C-6 25, -14 55, 0 75"
+            stroke="#ffd0df"
+            stroke-width="3"
+            fill="none"
+            stroke-linecap="round"
+          />
+          <circle
+            cx="0"
+            cy="95"
+            r="20"
+            fill="#ffb6c1"
+            stroke="#fff"
+            stroke-width="2"
+          />
+        </g>
+      </svg>
+      <!-- add more or duplicate in CSS as needed -->
+    </div>
+
+    <header>
+      <h1>🧶 Knotty By Nature Crafts</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a id="authLink" href="login.html">Login</a>
+        <button id="logoutBtn" class="small hidden">Log out</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h2>Handmade with love — and a little knotty humor 💕</h2>
+        <p>
+          Cozy crochet hats, scarves, and custom requests. Perfect gifts, warm
+          stitches.
+        </p>
+        <a class="btn" href="products.html">Shop Now</a>
+      </section>
+    </main>
+
+    <footer>
+      <p>© <span id="year"></span> Knotty By Nature Crafts</p>
+    </footer>
+
+    <!-- Firebase (compat builds to keep code simple for static hosting) -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-functions-compat.js"></script>
+    <!-- Stripe -->
+    <script src="https://js.stripe.com/v3/"></script>
+
+    <script src="app.js"></script>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

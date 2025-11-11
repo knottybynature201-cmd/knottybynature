@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Handlee&family=Poppins:wght@400;600&display=swap");
+
+:root {
+  --pink-1: #fff0f5;
+  --pink-2: #ffe6f0;
+  --accent: #ff7aa2;
+  --text: #5a3e36;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: var(--pink-1);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Yarn row: little hanging yarn SVGs across top */
+.yarn-row {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  padding-top: 12px;
+  pointer-events: none;
+}
+.yarn {
+  width: 52px;
+  height: 140px;
+  opacity: 0.95;
+  transform-origin: center top;
+  animation: sway 4s ease-in-out infinite;
+}
+.yarn:nth-child(2) {
+  animation-duration: 5s;
+  transform: scale(0.92);
+}
+.yarn:nth-child(3) {
+  animation-duration: 4.8s;
+  transform: scale(1.05);
+}
+
+@keyframes sway {
+  0% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(-3deg);
+  }
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, #ffb6c1, #ffcce0);
+  padding: 18px 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+h1 {
+  font-family: "Handlee", cursive;
+  margin: 0;
+  font-size: 1.6rem;
+  color: var(--text);
+}
+nav {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+}
+.small {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: none;
+  background: #ff9eb5;
+  color: white;
+  cursor: pointer;
+}
+.hidden {
+  display: none;
+}
+
+/* Hero */
+.hero {
+  padding: 70px 18px;
+  background-image: radial-gradient(
+      circle at 20% 10%,
+      rgba(255, 200, 215, 0.25) 0px,
+      transparent 120px
+    ),
+    radial-gradient(
+      circle at 80% 90%,
+      rgba(255, 160, 190, 0.18) 0px,
+      transparent 180px
+    );
+  border-top: 4px dashed #ff9eb5;
+  border-bottom: 4px dashed #ff9eb5;
+}
+.hero h2 {
+  font-family: "Handlee", cursive;
+  font-size: 2rem;
+  margin: 0 0 8px;
+}
+.btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 12px 22px;
+  border-radius: 24px;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.12s ease;
+}
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+/* Products */
+.product {
+  display: inline-block;
+  background: #fff;
+  border: 2px solid #ffd6e3;
+  padding: 12px;
+  margin: 12px;
+  width: 190px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+.product img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Footer */
+footer {
+  background: #ffcce0;
+  padding: 10px;
+  text-align: center;
+  margin-top: 36px;
+}
+
+/* Responsive */
+@media (max-width: 520px) {
+  .yarn {
+    display: none;
+  } /* keep it simple on tiny screens */
+  .hero {
+    padding: 36px 12px;
+  }
+}

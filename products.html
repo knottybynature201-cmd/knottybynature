@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Products - Knotty By Nature Crafts</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="yarn-row">
+      <!-- duplicate the same small inline SVGs for consistent look -->
+      <!-- copy the SVGs from index.html or keep only a few -->
+    </div>
+
+    <header>
+      <h1>🧵 Knotty By Nature Crafts</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a id="authLink" href="login.html">Login</a>
+        <button id="logoutBtn" class="small hidden">Log out</button>
+      </nav>
+    </header>
+
+    <main id="productsArea" style="padding: 24px; text-align: center">
+      <!-- We'll render product cards with JS so they can contain data-price and id -->
+    </main>
+
+    <footer
+      style="display: flex; gap: 12px; justify-content: center; padding: 18px"
+    >
+      <button id="viewCart" class="small">
+        View Cart (<span id="cartCount">0</span>)
+      </button>
+      <button id="checkoutBtn" class="small">Checkout</button>
+    </footer>
+
+    <!-- Firebase + Stripe -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-functions-compat.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+
+    <script src="app.js"></script>
+  </body>
+</html>
